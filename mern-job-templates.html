@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MERN Stack Developer — Job Search Templates 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0D0D0D;
+    --paper: #F7F4EE;
+    --accent: #1A3A2A;
+    --accent2: #C8A96E;
+    --muted: #7A7268;
+    --border: #D8D3C8;
+    --white: #FFFFFF;
+    --green-light: #EAF2EC;
+    --tag-bg: #E8E3D8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ─── COVER PAGE ─── */
+  .cover {
+    min-height: 100vh;
+    background: var(--accent);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover::before {
+    content: "";
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    border: 80px solid rgba(200,169,110,0.15);
+    border-radius: 50%;
+  }
+
+  .cover::after {
+    content: "";
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 350px; height: 350px;
+    border: 60px solid rgba(200,169,110,0.08);
+    border-radius: 50%;
+  }
+
+  .cover-tag {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 32px;
+  }
+
+  .cover h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    color: var(--white);
+  }
+
+  .cover h1 span { color: var(--accent2); }
+
+  .cover-desc {
+    font-size: 17px;
+    color: rgba(255,255,255,0.7);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  .cover-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    max-width: 560px;
+  }
+
+  .cover-stat {
+    background: rgba(255,255,255,0.04);
+    padding: 20px;
+  }
+
+  .cover-stat .num {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent2);
+    display: block;
+  }
+
+  .cover-stat .lbl {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    display: block;
+  }
+
+  .cover-year {
+    position: absolute;
+    bottom: 48px; right: 60px;
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.3);
+    text-transform: uppercase;
+  }
+
+  /* ─── PAGE LAYOUT ─── */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    page-break-after: always;
+  }
+
+  .page:last-child { page-break-after: avoid; }
+
+  /* ─── SECTION HEADER ─── */
+  .section-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 40px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-title .num {
+    background: var(--accent);
+    color: var(--white);
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  /* ─── RESUME ─── */
+  .resume {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 48px;
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
+
+  .resume-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+  }
+
+  .resume-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .resume-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent2);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .resume-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .resume-contact span { display: flex; align-items: center; gap: 5px; }
+
+  .resume-body { display: grid; grid-template-columns: 2fr 1fr; gap: 32px; }
+
+  .resume-section { margin-bottom: 24px; }
+
+  .resume-section h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+
+  .resume-section p { font-size: 13px; color: #333; line-height: 1.65; }
+
+  .job { margin-bottom: 18px; }
+  .job-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+  .job-title { font-weight: 500; font-size: 14px; color: var(--ink); }
+  .job-company { font-size: 13px; color: var(--accent); font-weight: 500; }
+  .job-date { font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+  .job ul { padding-left: 16px; margin-top: 6px; }
+  .job li { font-size: 13px; color: #333; margin-bottom: 4px; line-height: 1.55; }
+
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tag {
+    background: var(--tag-bg);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.3px;
+  }
+
+  .project-item { margin-bottom: 14px; }
+  .project-item .proj-name { font-weight: 500; font-size: 13px; color: var(--accent); }
+  .project-item p { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .project-item .proj-link { font-size: 11px; color: var(--accent2); }
+
+  /* ─── TEMPLATE CARDS ─── */
+  .template-grid { display: grid; gap: 24px; }
+
+  .tmpl-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .tmpl-card-header {
+    background: var(--accent);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tmpl-card-header h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.3px;
+  }
+
+  .tmpl-type {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    background: rgba(200,169,110,0.15);
+    padding: 3px 10px;
+    border-radius: 2px;
+  }
+
+  .tmpl-body {
+    padding: 24px;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #2a2a2a;
+    white-space: pre-wrap;
+    background: #FAFAF8;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tmpl-body strong { color: var(--accent); font-weight: 500; }
+  .tmpl-body em { color: var(--muted); font-style: normal; font-size: 12px; }
+
+  .tmpl-footer {
+    padding: 12px 24px;
+    background: var(--white);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .tmpl-tip {
+    font-size: 12px;
+    color: var(--muted);
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  .copy-btn {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.15s;
+  }
+
+  .copy-btn:hover { background: #2a5a3f; }
+  .copy-btn.copied { background: #2d7a4f; }
+
+  /* ─── COVER LETTER ─── */
+  .letter {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 48px 52px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #222;
+    margin-bottom: 24px;
+  }
+
+  .letter-meta { margin-bottom: 32px; color: var(--muted); font-size: 13px; }
+  .letter-meta p { margin-bottom: 3px; }
+  .letter h2 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: var(--accent); margin-bottom: 24px; }
+  .letter p { margin-bottom: 16px; }
+  .letter .highlight { background: rgba(200,169,110,0.15); padding: 0 3px; }
+  .letter-sig { margin-top: 32px; }
+  .letter-sig p { margin-bottom: 4px; }
+  .letter-sig .sig-name { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--accent); }
+
+  /* ─── TOC & NAV ─── */
+  .toc {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 32px 36px;
+    margin-bottom: 40px;
+  }
+
+  .toc h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .toc-list { list-style: none; }
+
+  .toc-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: 14px;
+  }
+
+  .toc-list li:last-child { border-bottom: none; }
+  .toc-list a { color: var(--ink); text-decoration: none; font-weight: 400; }
+  .toc-list a:hover { color: var(--accent); }
+  .toc-num { font-family: 'Syne', sans-serif; font-size: 11px; color: var(--muted); }
+
+  /* ─── TIPS BOX ─── */
+  .tips-box {
+    border-left: 3px solid var(--accent2);
+    background: rgba(200,169,110,0.06);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .tips-box strong { color: var(--accent); font-weight: 500; display: block; margin-bottom: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+  .tips-box ul { padding-left: 16px; }
+  .tips-box li { margin-bottom: 5px; color: #333; }
+
+  /* ─── GITHUB README ─── */
+  .readme-box {
+    background: #0D1117;
+    color: #c9d1d9;
+    padding: 32px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-x: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .readme-box .md-h1 { color: #58a6ff; font-size: 18px; font-weight: bold; margin-bottom: 12px; display: block; }
+  .readme-box .md-h2 { color: #79c0ff; font-size: 15px; font-weight: bold; margin: 20px 0 8px; display: block; }
+  .readme-box .md-h3 { color: #d2a8ff; font-size: 13px; font-weight: bold; margin: 14px 0 6px; display: block; }
+  .readme-box .md-badge { background: #21262d; color: #58a6ff; padding: 1px 8px; border-radius: 3px; font-size: 11px; margin-right: 4px; border: 1px solid #30363d; }
+  .readme-box .md-code { background: #161b22; color: #ff7b72; padding: 1px 6px; border-radius: 3px; }
+  .readme-box .md-comment { color: #8b949e; }
+  .readme-box .md-green { color: #56d364; }
+  .readme-box .md-yellow { color: #e3b341; }
+  .readme-box a { color: #58a6ff; }
+
+  /* ─── SALARY TABLE ─── */
+  .salary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+  }
+
+  .salary-table thead tr { background: var(--accent); }
+  .salary-table thead th {
+    color: var(--white);
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .salary-table tbody tr { border-bottom: 1px solid var(--border); }
+  .salary-table tbody tr:hover { background: var(--green-light); }
+  .salary-table td { padding: 11px 16px; color: #333; }
+  .salary-table td:first-child { font-weight: 500; color: var(--accent); }
+  .salary-table .high { color: #2d7a4f; font-weight: 500; }
+
+  /* ─── PRINT ─── */
+  @media print {
+    .copy-btn { display: none; }
+    .page { padding: 40px 32px; }
+    .cover { min-height: auto; padding: 60px 48px; }
+  }
+
+  @media (max-width: 700px) {
+    .cover { padding: 60px 32px; }
+    .cover-grid { grid-template-columns: repeat(2, 1fr); }
+    .page { padding: 40px 20px; }
+    .resume { padding: 28px 20px; }
+    .resume-body { grid-template-columns: 1fr; }
+    .letter { padding: 32px 24px; }
+    .readme-box { padding: 20px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     COVER PAGE
+══════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-tag">Job Search Templates — MERN Stack Developer</div>
+  <h1>Land Your<br><span>Dream Remote</span><br>Dev Job.</h1>
+  <p class="cover-desc">A complete collection of professional templates, scripts, and frameworks for securing a high-paying remote MERN Stack role in 2026.</p>
+  <div class="cover-grid">
+    <div class="cover-stat"><span class="num">16</span><span class="lbl">Templates</span></div>
+    <div class="cover-stat"><span class="num">4</span><span class="lbl">Markets</span></div>
+    <div class="cover-stat"><span class="num">$95K+</span><span class="lbl">Target Salary</span></div>
+    <div class="cover-stat"><span class="num">2026</span><span class="lbl">Edition</span></div>
+  </div>
+  <div class="cover-year">Prepared for MERN Stack Developers · 2026</div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     TABLE OF CONTENTS
+══════════════════════════════════ -->
+<div class="page">
+  <div class="section-label">Navigation</div>
+  <div class="section-title"><span class="num">00</span> Contents</div>
+
+  <div class="toc">
+    <h2>All Templates</h2>
+    <ul class="toc-list">
+      <li><a href="#resume">01 — Professional Resume Template</a><span class="toc-num">Full ATS-optimized layout</span></li>
+      <li><a href="#cover-letter">02 — Cover Letter Template</a><span class="toc-num">USA / UK version</span></li>
+      <li><a href="#linkedin-about">03 — LinkedIn About Section</a><span class="toc-num">3 variations</span></li>
+      <li><a href="#linkedin-headline">04 — LinkedIn Headline Formulas</a><span class="toc-num">5 headlines</span></li>
+      <li><a href="#connection">05 — LinkedIn Connection Requests</a><span class="toc-num">4 scenarios</span></li>
+      <li><a href="#recruiter">06 — Recruiter Outreach Messages</a><span class="toc-num">3 templates</span></li>
+      <li><a href="#cto">07 — CEO / CTO Direct Message</a><span class="toc-num">2 templates</span></li>
+      <li><a href="#followup">08 — Follow-Up Message</a><span class="toc-num">2 templates</span></li>
+      <li><a href="#email">09 — Cold Email to Hiring Manager</a><span class="toc-num">Full email</span></li>
+      <li><a href="#github">10 — GitHub Profile README</a><span class="toc-num">Full markdown</span></li>
+      <li><a href="#project-readme">11 — Project README Template</a><span class="toc-num">Full markdown</span></li>
+      <li><a href="#salary">12 — Salary Negotiation Scripts</a><span class="toc-num">3 scenarios</span></li>
+      <li><a href="#salary-table">13 — Salary Reference Table</a><span class="toc-num">USA, UK, Canada, Dubai</span></li>
+      <li><a href="#loom">14 — Loom Video Introduction Script</a><span class="toc-num">90-second script</span></li>
+      <li><a href="#referral">15 — Referral Request Message</a><span class="toc-num">2 templates</span></li>
+      <li><a href="#thank-you">16 — Post-Interview Thank You</a><span class="toc-num">Same-day email</span></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     01 — RESUME
+══════════════════════════════════ -->
+<div class="page" id="resume">
+  <div class="section-label">Template 01</div>
+  <div class="section-title"><span class="num">01</span> Resume Template</div>
+
+  <div class="tips-box">
+    <strong>💡 How to use this</strong>
+    <ul>
+      <li>Replace all [bracketed] placeholders with your real information</li>
+      <li>Keep bullet points to 1–2 lines, always starting with an action verb</li>
+      <li>Every bullet should follow: Action + Tech used + Measurable result</li>
+      <li>Keep to 1 page if under 5 years experience, max 2 pages otherwise</li>
+    </ul>
+  </div>
+
+  <div class="resume">
+    <div class="resume-header">
+      <div class="resume-name">[Your Full Name]</div>
+      <div class="resume-title">Full-Stack MERN Developer · Next.js · TypeScript</div>
+      <div class="resume-contact">
+        <span>📧 [your.email@gmail.com]</span>
+        <span>🔗 linkedin.com/in/[yourprofile]</span>
+        <span>💻 github.com/[yourusername]</span>
+        <span>🌐 [yourportfolio.dev]</span>
+        <span>🕐 UTC+[X] — open to remote</span>
+      </div>
+    </div>
+
+    <div class="resume-body">
+      <div class="left-col">
+
+        <div class="resume-section">
+          <h3>Professional Summary</h3>
+          <p>Full-stack MERN developer with [X] years building scalable web applications for [startups / product companies / agencies]. Specialized in React, Next.js, TypeScript, and Node.js. Proven track record of delivering production-ready features on time in remote, async-first environments. Seeking a senior remote role with a US/UK company.</p>
+        </div>
+
+        <div class="resume-section">
+          <h3>Experience</h3>
+
+          <div class="job">
+            <div class="job-header">
+              <div>
+                <div class="job-title">Senior Full-Stack Developer</div>
+                <div class="job-company">[Company Name] — Remote</div>
+              </div>
+              <div class="job-date">Jan 2023 – Present</div>
+            </div>
+            <ul>
+              <li>Architected and shipped a multi-tenant SaaS dashboard using Next.js 14 App Router and MongoDB Atlas, reducing page load time by <strong>62%</strong> compared to the legacy app</li>
+              <li>Designed 40+ RESTful API endpoints with Node.js/Express, TypeScript, and Zod validation serving <strong>80K+ monthly active users</strong></li>
+              <li>Implemented Stripe subscription billing (monthly/annual + proration) that drove <strong>$30K MRR</strong> within 3 months of launch</li>
+              <li>Led migration from JavaScript to <strong>TypeScript</strong> across the entire codebase, eliminating 200+ runtime errors</li>
+              <li>Reduced CI/CD pipeline runtime from 18 min to <strong>4 min</strong> by parallelizing GitHub Actions and adding build caching</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <div>
+                <div class="job-title">MERN Stack Developer</div>
+                <div class="job-company">[Previous Company] — [Remote / Hybrid]</div>
+              </div>
+              <div class="job-date">Mar 2021 – Dec 2022</div>
+            </div>
+            <ul>
+              <li>Built a real-time order tracking system using <strong>Socket.io + Redis pub/sub</strong>, eliminating 300+ daily customer support tickets</li>
+              <li>Developed React component library of 25+ reusable components with Storybook documentation, cutting frontend dev time by <strong>35%</strong></li>
+              <li>Optimized MongoDB aggregation pipelines with compound indexing — average query time dropped from <strong>3.2s to 90ms</strong></li>
+              <li>Integrated AWS S3 + CloudFront for media uploads, reducing storage costs by <strong>40%</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3>Key Projects</h3>
+
+          <div class="project-item">
+            <div class="proj-name">⚡ [ProjectName] — SaaS Platform</div>
+            <p>Multi-tenant SaaS with auth, Stripe billing, analytics · Next.js 14, MongoDB, TypeScript, Vercel</p>
+            <div class="proj-link">🔗 live: [url] · github: [url]</div>
+          </div>
+
+          <div class="project-item">
+            <div class="proj-name">💬 [ChatApp] — Real-time Messaging</div>
+            <p>Group chat with rooms, presence, file sharing · React, Node.js, Socket.io, Redis, MongoDB</p>
+            <div class="proj-link">🔗 live: [url] · github: [url]</div>
+          </div>
+
+          <div class="project-item">
+            <div class="proj-name">🤖 [AI Tool] — AI-Powered App</div>
+            <p>Document analyzer with semantic search · Next.js, OpenAI API, Pinecone, LangChain</p>
+            <div class="proj-link">🔗 live: [url] · github: [url]</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right-col">
+        <div class="resume-section">
+          <h3>Core Skills</h3>
+          <p style="font-size:12px;color:var(--muted);margin-bottom:8px;">Frontend</p>
+          <div class="skill-tags">
+            <span class="tag">React 18</span><span class="tag">Next.js 14</span>
+            <span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span>
+            <span class="tag">Redux Toolkit</span><span class="tag">React Query</span>
+          </div>
+          <p style="font-size:12px;color:var(--muted);margin:12px 0 8px;">Backend</p>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span><span class="tag">Express.js</span>
+            <span class="tag">REST APIs</span><span class="tag">GraphQL</span>
+            <span class="tag">Socket.io</span><span class="tag">JWT/OAuth</span>
+          </div>
+          <p style="font-size:12px;color:var(--muted);margin:12px 0 8px;">Database & Infra</p>
+          <div class="skill-tags">
+            <span class="tag">MongoDB</span><span class="tag">Redis</span>
+            <span class="tag">PostgreSQL</span><span class="tag">AWS S3</span>
+            <span class="tag">Docker</span><span class="tag">Vercel</span>
+          </div>
+          <p style="font-size:12px;color:var(--muted);margin:12px 0 8px;">Tools</p>
+          <div class="skill-tags">
+            <span class="tag">GitHub Actions</span><span class="tag">Jest</span>
+            <span class="tag">Cypress</span><span class="tag">Figma</span>
+            <span class="tag">Stripe API</span><span class="tag">OpenAI API</span>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3>Education</h3>
+          <div style="font-size:13px;">
+            <p style="font-weight:500;color:var(--ink);">[Degree or Bootcamp]</p>
+            <p style="color:var(--muted);font-size:12px;">[University / Institution]</p>
+            <p style="color:var(--muted);font-size:12px;">[Year]</p>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3>Certifications</h3>
+          <div style="font-size:13px;line-height:1.8;">
+            <p>✅ AWS Cloud Practitioner</p>
+            <p>✅ MongoDB Associate Developer</p>
+            <p>✅ Meta React Developer (Coursera)</p>
+            <p>✅ [Your actual cert here]</p>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3>Languages</h3>
+          <div style="font-size:13px;line-height:2;">
+            <p>🇺🇸 English — <span style="color:var(--muted)">Professional</span></p>
+            <p>🌍 [Language] — <span style="color:var(--muted)">Native</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     02 — COVER LETTER
+══════════════════════════════════ -->
+<div class="page" id="cover-letter">
+  <div class="section-label">Template 02</div>
+  <div class="section-title"><span class="num">02</span> Cover Letter</div>
+
+  <div class="tips-box">
+    <strong>💡 Usage tips</strong>
+    <ul>
+      <li>Personalize the first paragraph for every application — mention a specific product, blog post, or company achievement</li>
+      <li>The middle paragraph should match their job description keywords exactly</li>
+      <li>Keep it to one page, max 350 words</li>
+    </ul>
+  </div>
+
+  <div class="letter">
+    <div class="letter-meta">
+      <p>[Your Name]</p>
+      <p>[your.email@gmail.com] · [github.com/yourprofile] · [yourportfolio.dev]</p>
+      <p>[Date]</p>
+    </div>
+
+    <h2>Application: Senior Full-Stack Developer (Remote)</h2>
+
+    <p>Dear [Hiring Manager's Name / Engineering Team at Company X],</p>
+
+    <p>I came across [Company Name] while researching <span class="highlight">companies building [specific product category]</span>, and your recent launch of [specific feature or product they built] immediately caught my attention. The way you've approached [specific technical or product detail] is exactly the kind of work I want to be part of.</p>
+
+    <p>I'm a full-stack MERN developer with [X] years of experience building production-grade web applications. My core stack — <strong>React, Next.js, TypeScript, Node.js, and MongoDB</strong> — aligns closely with what you're looking for. In my last role, I:</p>
+
+    <p>→ Architected a SaaS dashboard serving 80K+ monthly active users, cutting page load times by 62%<br>
+    → Designed and shipped a Stripe billing integration generating $30K MRR within 3 months<br>
+    → Led a full TypeScript migration that eliminated 200+ production runtime errors</p>
+
+    <p>I noticed your job description mentions [specific requirement from their JD — e.g. "experience with real-time systems"]. I built a Socket.io + Redis pub/sub system at [Previous Company] that handled [X concurrent users / X messages/second]. I'd love to bring that experience to your team.</p>
+
+    <p>I work fully remotely and have done so for [X] years. I'm comfortable with async-first workflows, Slack/Notion documentation, and overlap hours with [EST/GMT] timezone. I take ownership of features from design to deployment without needing hand-holding.</p>
+
+    <p>My portfolio with live demos is at <strong>[yourportfolio.dev]</strong> and my GitHub is <strong>github.com/[yourusername]</strong> — I'd love for you to look at the [SaaS project name] project in particular, which I think is most relevant to this role.</p>
+
+    <p>I'd be happy to do a short technical task or pair-programming session if that helps you evaluate fit. Thank you for your time.</p>
+
+    <div class="letter-sig">
+      <p>Warm regards,</p>
+      <p class="sig-name">[Your Full Name]</p>
+      <p style="font-size:13px;color:var(--muted);margin-top:4px;">[yourportfolio.dev] · [LinkedIn URL]</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     03–04 — LINKEDIN TEMPLATES
+══════════════════════════════════ -->
+<div class="page" id="linkedin-about">
+  <div class="section-label">Templates 03–04</div>
+  <div class="section-title"><span class="num">03</span> LinkedIn About Section</div>
+
+  <div class="template-grid">
+    <div class="tmpl-card">
+      <div class="tmpl-card-header">
+        <h3>About Section — Version A (Story-driven)</h3>
+        <span class="tmpl-type">LinkedIn · About</span>
+      </div>
+      <div class="tmpl-body">I build things on the web that people actually use.
+
+As a full-stack MERN developer with [X] years of experience, I've shipped production apps for [startups / product companies] — from SaaS dashboards and real-time systems to AI-integrated tools.
+
+<strong>My stack:</strong> React · Next.js 14 · TypeScript · Node.js · MongoDB · Redis · AWS
+
+<strong>What I do well:</strong>
+→ Turn complex requirements into clean, scalable code
+→ Deliver full features — frontend to database to deployment
+→ Work independently in remote, async-first teams
+→ Communicate clearly and document thoroughly
+
+<strong>Recently shipped:</strong> [ProjectName] — a [brief description] used by [X users / companies]. Live at [URL].
+
+I'm currently open to <strong>senior remote full-time roles</strong> with US, UK, or Canadian companies (flexible timezone overlap).
+
+If you're hiring or know someone who is — let's connect.</div>
+      <div class="tmpl-footer">
+        <span class="tmpl-tip">Best for: Developers who have shipped real products. Replace [placeholders] and add 1 specific project with a live URL.</span>
+        <button class="copy-btn" onclick="copyText(this, 'about-a')">Copy ↗</button>
+      </div>
+    </div>
+
+    <div class="tmpl-card">
+      <div class="tmpl-card-header">
+        <h3>About Section — Version B (Achievement-first)</h3>
+        <span class="tmpl-type">LinkedIn · About</span>
+      </div>
+      <div class="tmpl-body">Full-stack MERN developer. [X] years. Production apps. Real users.
+
+I specialize in building SaaS platforms, REST/GraphQL APIs, and real-time web applications using React, Next.js, TypeScript, Node.js, and MongoDB.
+
+<strong>Some things I've built:</strong>
+→ A multi-tenant SaaS dashboard that serves [X]K monthly active users
+→ A real-time messaging system handling [X] concurrent connections
+→ An AI-powered document tool using OpenAI + LangChain + Pinecone
+→ A Stripe-integrated billing system processing $[X]K MRR
+
+I've been working remotely for [X] years. I write docs, give async updates, and ship features without needing to be managed.
+
+<strong>Looking for:</strong> Senior remote full-stack or full-stack engineer roles with international companies. Open to UTC-5 to UTC+3 timezone overlap.
+
+Portfolio: [yourportfolio.dev] | GitHub: github.com/[username]</div>
+      <div class="tmpl-footer">
+        <span class="tmpl-tip">Best for: Developers with measurable results. Works well when you have specific numbers to show.</span>
+        <button class="copy-btn" onclick="copyText(this, 'about-b')">Copy ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;"></div>
+  <div class="section-label">Template 04</div>
+  <div class="section-title"><span class="num">04</span> LinkedIn Headline Formulas</div>
+
+  <div class="template-grid">
+    <div class="tmpl-card">
+      <div class="tmpl-card-header">
+        <h3>Headline — Formula 1: Stack + Specialization + Status</h3>
+        <span class="tmpl-type">LinkedIn · Headline</span>
+      </div>
+      <div class="tmpl-body">MERN Stack Developer | Next.js · TypeScript · Node.js | Building Scalable SaaS Products | Open to Remote Roles (US/UK/Canada)</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Best all-round formula. Hits keywords recruiters search for.</span><button class="copy-btn" onclick="copyText(this, 'h1')">Copy ↗</button></div>
+    </div>
+    <div class="tmpl-card">
+      <div class="tmpl-card-header">
+        <h3>Headline — Formula 2: Value-led</h3>
+        <span class="tmpl-type">LinkedIn · Headline</span>
+      </div>
+      <div class="tmpl-body">Full-Stack Developer (MERN) | I Ship React + Node.js Apps That Scale | TypeScript · MongoDB · AWS | Available for Remote Roles</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">More conversational — stands out from generic developer headlines.</span><button class="copy-btn" onclick="copyText(this, 'h2')">Copy ↗</button></div>
+    </div>
+    <div class="tmpl-card">
+      <div class="tmpl-card-header">
+        <h3>Headline — Formula 3: Results-focused</h3>
+        <span class="tmpl-type">LinkedIn · Headline</span>
+      </div>
+      <div class="tmpl-body">Senior MERN Developer | Built SaaS Apps for 80K+ Users | Next.js · TypeScript · Node.js | Seeking Remote Roles in US/UK Companies</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Include real numbers if you have them. Numbers catch recruiter attention instantly.</span><button class="copy-btn" onclick="copyText(this, 'h3')">Copy ↗</button></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     05–08 — OUTREACH MESSAGES
+══════════════════════════════════ -->
+<div class="page" id="connection">
+  <div class="section-label">Templates 05–08</div>
+  <div class="section-title"><span class="num">05</span> LinkedIn Connection Requests</div>
+
+  <div class="tips-box">
+    <strong>Rules for connection requests</strong>
+    <ul>
+      <li>300 character limit — be concise, warm, and specific</li>
+      <li>Never ask for a job in the connection request itself</li>
+      <li>Reference something specific about them — shows you did homework</li>
+      <li>After they accept, wait 24–48 hours then send your main message</li>
+    </ul>
+  </div>
+
+  <div class="template-grid">
+    <div class="tmpl-card">
+      <div class="tmpl-card-header"><h3>To a Recruiter (Tech)</h3><span class="tmpl-type">Connection Request</span></div>
+      <div class="tmpl-body">Hi [Name], I noticed you recruit for engineering roles at [Company]. I'm a MERN/Next.js developer actively exploring remote opportunities with international companies. Would love to be on your radar. Happy to connect!</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Keep it simple. Don't mention salary or specific roles yet.</span><button class="copy-btn" onclick="copyText(this, 'conn1')">Copy ↗</button></div>
+    </div>
+
+    <div class="tmpl-card">
+      <div class="tmpl-card-header"><h3>To an Engineering Manager</h3><span class="tmpl-type">Connection Request</span></div>
+      <div class="tmpl-body">Hi [Name], I've been following [Company]'s engineering work — the way your team built [specific feature] is impressive. I'm a full-stack MERN dev exploring remote roles. Would love to connect and learn more about your work.</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Mention something specific — a blog post, a product feature, a GitHub repo. Generic messages get ignored.</span><button class="copy-btn" onclick="copyText(this, 'conn2')">Copy ↗</button></div>
+    </div>
+
+    <div class="tmpl-card">
+      <div class="tmpl-card-header"><h3>To a Developer at a Target Company</h3><span class="tmpl-type">Connection Request</span></div>
+      <div class="tmpl-body">Hi [Name], saw your post about [topic]. Really resonated — I had a similar experience building [X]. Would love to connect with other devs working on interesting products. No agenda, just building my network!</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Developers are your best internal referral sources. Be genuine, not salesy.</span><button class="copy-btn" onclick="copyText(this, 'conn3')">Copy ↗</button></div>
+    </div>
+
+    <div class="tmpl-card">
+      <div class="tmpl-card-header"><h3>To a CTO / Founder</h3><span class="tmpl-type">Connection Request</span></div>
+      <div class="tmpl-body">Hi [Name], I've been using [Product] for [X months] — really love how you've handled [specific feature]. I'm a MERN/Next.js developer who's built similar products and would love to connect with founders building in this space.</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Being a real user of their product is the strongest possible opening. Mention it if true.</span><button class="copy-btn" onclick="copyText(this, 'conn4')">Copy ↗</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="recruiter">
+  <div class="section-label">Templates 06–07</div>
+  <div class="section-title"><span class="num">06</span> Recruiter & CTO Outreach Messages</div>
+
+  <div class="template-grid">
+    <div class="tmpl-card">
+      <div class="tmpl-card-header"><h3>Message to a Recruiter (after connecting)</h3><span class="tmpl-type">LinkedIn DM · Recruiter</span></div>
+      <div class="tmpl-body">Hi [Name], thanks for connecting!
+
+I wanted to reach out because I'm actively exploring senior remote full-stack roles. A bit about me:
+
+→ [X] years building production MERN apps (Next.js, TypeScript, Node.js, MongoDB)
+→ Experience with SaaS platforms, real-time systems, and REST/GraphQL APIs
+→ Fully remote for [X] years — comfortable with async workflows and UTC overlap
+→ Portfolio: [yourportfolio.dev] | GitHub: github.com/[username]
+
+I'm targeting roles at US/UK product companies in the $[X]–$[X]K range (or equivalent contract rate).
+
+If you're working on any roles that might be a fit, I'd love to chat. Happy to send my full resume too.
+
+Thanks, [Your Name]</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Send within 48 hours of them accepting. Include salary range so you don't waste each other's time.</span><button class="copy-btn" onclick="copyText(this, 'rec1')">Copy ↗</button></div>
+    </div>
+
+    <div class="tmpl-card" id="cto">
+      <div class="tmpl-card-header"><h3>Direct Message to CTO / Engineering Lead</h3><span class="tmpl-type">LinkedIn DM · CTO</span></div>
+      <div class="tmpl-body">Hi [Name],
+
+I've been following [Company]'s engineering updates — particularly [specific blog post, product launch, or GitHub activity]. Really impressive how you've [specific technical or product detail].
+
+I'm a full-stack MERN developer with [X] years building [relevant type of product]. My work that's most relevant to what you're building:
+
+→ [Project/achievement 1 relevant to their product]
+→ [Project/achievement 2 relevant to their stack]
+→ Live portfolio: [yourportfolio.dev]
+
+I noticed you're [hiring / growing the team / shipping X] — is there a remote engineering role that could be a fit? I'd love a 15-minute conversation if the timing works.
+
+No worries at all if not — keep up the great work on [Product].
+
+[Your Name]</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">This template works because it leads with genuine interest, not desperation. Do your homework — read their blog, check their GitHub, use their product.</span><button class="copy-btn" onclick="copyText(this, 'cto1')">Copy ↗</button></div>
+    </div>
+
+    <div class="tmpl-card" id="followup">
+      <div class="tmpl-card-header"><h3>Follow-Up Message (7 days, no reply)</h3><span class="tmpl-type">LinkedIn DM · Follow-up</span></div>
+      <div class="tmpl-body">Hi [Name], just wanted to bump this in case it got buried — completely understand how busy things get.
+
+I noticed you recently [shipped X / posted about Y / announced Z] — exciting stuff!
+
+Still very interested in [Company] if there's a remote engineering role that could fit. Happy to do a short technical assessment or share more about my work.
+
+[Your Name] | [yourportfolio.dev]</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Send once, 7 days after first message. Reference something new they've done — shows you're genuinely following them. Never send a third follow-up.</span><button class="copy-btn" onclick="copyText(this, 'fu1')">Copy ↗</button></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     09 — COLD EMAIL
+══════════════════════════════════ -->
+<div class="page" id="email">
+  <div class="section-label">Template 09</div>
+  <div class="section-title"><span class="num">09</span> Cold Email to Hiring Manager</div>
+
+  <div class="letter">
+    <div class="letter-meta">
+      <p><strong>Subject:</strong> Senior MERN/Next.js Developer — Interested in Remote Role</p>
+      <p><strong>To:</strong> [hiringmanager@company.com]</p>
+    </div>
+
+    <p>Hi [Name],</p>
+
+    <p>I found your contact while researching [Company] — I've been following your product since [specific milestone or feature launch] and I'm genuinely impressed by [specific technical or product detail].</p>
+
+    <p>I'm a full-stack MERN developer ([X] years) specializing in Next.js, TypeScript, and Node.js. I'm reaching out directly because I think there might be a good fit:</p>
+
+    <p><strong>What I bring:</strong><br>
+    → Built and shipped a multi-tenant SaaS platform from 0 to [X]K users (Next.js 14, MongoDB, Stripe)<br>
+    → Designed REST APIs serving [X]K+ requests/day with 99.9% uptime<br>
+    → [X] years working remotely — experienced with async communication and self-management</p>
+
+    <p><strong>Relevant to your stack:</strong> I noticed you use [tech from their job posting or engineering blog]. I have [X] years working with [that tech] — specifically [brief relevant detail].</p>
+
+    <p>My portfolio with live project demos: <strong>[yourportfolio.dev]</strong><br>
+    GitHub (recent activity): <strong>github.com/[yourusername]</strong></p>
+
+    <p>If there's a remote engineering role open — or coming up — I'd love a 20-minute call. I'm flexible on time zones.</p>
+
+    <p>Thanks for your time, [Name].</p>
+
+    <div class="letter-sig">
+      <p class="sig-name">[Your Name]</p>
+      <p style="font-size:13px;color:var(--muted);">[yourportfolio.dev] · [LinkedIn] · [+XX XXX XXX XXXX]</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     10 — GITHUB PROFILE README
+══════════════════════════════════ -->
+<div class="page" id="github">
+  <div class="section-label">Template 10</div>
+  <div class="section-title"><span class="num">10</span> GitHub Profile README</div>
+
+  <div class="tips-box">
+    <strong>Setup instructions</strong>
+    <ul>
+      <li>Create a repository named exactly the same as your GitHub username (e.g. github.com/johndoe/johndoe)</li>
+      <li>Add a README.md to this repo — it shows on your GitHub profile page</li>
+      <li>Replace all [placeholders], add real stats and links</li>
+    </ul>
+  </div>
+
+  <div class="readme-box">
+<span class="md-h1"># Hi, I'm [Your Name] 👋</span>
+<span class="md-comment">### Full-Stack MERN Developer · Next.js · TypeScript · Node.js</span>
+
+<span class="md-badge">Open to Remote</span> <span class="md-badge">Next.js 14</span> <span class="md-badge">TypeScript</span> <span class="md-badge">MongoDB</span>
+
+---
+
+<span class="md-h2">🧑‍💻 About Me</span>
+I build production-grade web applications for startups and product companies.
+Specialized in React, Next.js, TypeScript, and Node.js for [X]+ years.
+Currently open to **senior remote roles** with US/UK/Canadian companies.
+
+- 🔭 Currently building: **[Project Name]** — [brief description]
+- 🌱 Currently learning: **[e.g. AWS Solutions Architect, tRPC, Turborepo]**
+- 💼 Open to: Full-time remote roles · Contract work · Freelance
+- 📍 Timezone: UTC+[X] · Available for US/EU/UK overlap
+
+---
+
+<span class="md-h2">🛠 Tech Stack</span>
+
+<span class="md-h3">Frontend</span>
+<span class="md-badge">React 18</span> <span class="md-badge">Next.js 14</span> <span class="md-badge">TypeScript</span> <span class="md-badge">Tailwind CSS</span> <span class="md-badge">Redux Toolkit</span> <span class="md-badge">React Query</span>
+
+<span class="md-h3">Backend</span>
+<span class="md-badge">Node.js</span> <span class="md-badge">Express.js</span> <span class="md-badge">REST APIs</span> <span class="md-badge">GraphQL</span> <span class="md-badge">Socket.io</span> <span class="md-badge">JWT/OAuth2</span>
+
+<span class="md-h3">Database & Infrastructure</span>
+<span class="md-badge">MongoDB Atlas</span> <span class="md-badge">Redis</span> <span class="md-badge">PostgreSQL</span> <span class="md-badge">AWS S3</span> <span class="md-badge">Docker</span> <span class="md-badge">GitHub Actions</span>
+
+---
+
+<span class="md-h2">🚀 Featured Projects</span>
+
+| Project | Description | Stack | Links |
+|---------|-------------|-------|-------|
+| **[SaaS App]** | Multi-tenant SaaS with billing | Next.js, MongoDB, Stripe | [<span class="md-yellow">Demo</span>] [<span class="md-green">GitHub</span>] |
+| **[Chat App]** | Real-time messaging + presence | React, Socket.io, Redis | [<span class="md-yellow">Demo</span>] [<span class="md-green">GitHub</span>] |
+| **[AI Tool]** | Document AI with semantic search | Next.js, OpenAI, Pinecone | [<span class="md-yellow">Demo</span>] [<span class="md-green">GitHub</span>] |
+| **[E-commerce]** | Full-featured store + admin | Next.js, MongoDB, Stripe | [<span class="md-yellow">Demo</span>] [<span class="md-green">GitHub</span>] |
+
+---
+
+<span class="md-h2">📊 GitHub Stats</span>
+<span class="md-comment">![GitHub Stats](https://github-readme-stats.vercel.app/api?username=[yourusername]&show_icons=true&theme=dark)</span>
+<span class="md-comment">![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=[yourusername]&layout=compact&theme=dark)</span>
+
+---
+
+<span class="md-h2">📫 Let's Connect</span>
+<span class="md-badge">LinkedIn</span> <a>linkedin.com/in/[yourprofile]</a>
+<span class="md-badge">Portfolio</span> <a>[yourportfolio.dev]</a>
+<span class="md-badge">Email</span> <a>[your.email@gmail.com]</a>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     11 — PROJECT README
+══════════════════════════════════ -->
+<div class="page" id="project-readme">
+  <div class="section-label">Template 11</div>
+  <div class="section-title"><span class="num">11</span> Project README Template</div>
+
+  <div class="readme-box">
+<span class="md-h1"># [Project Name]</span>
+
+<span class="md-comment">> [One sentence description — what it does and who it's for]</span>
+
+<span class="md-badge">Next.js 14</span> <span class="md-badge">TypeScript</span> <span class="md-badge">MongoDB</span> <span class="md-badge">Node.js</span> <span class="md-badge">Stripe</span>
+
+<span class="md-badge" style="background:#1a3a2a;color:#56d364;border-color:#2d7a4f">✓ Live Demo</span> | <span class="md-badge" style="background:#1a3a2a;color:#58a6ff;border-color:#1f4a7a">GitHub Repo</span>
+
+---
+
+<span class="md-h2">📸 Preview</span>
+<span class="md-comment">![App Screenshot](./screenshots/dashboard.png)</span>
+<span class="md-comment"><!-- Add a GIF or screenshot of your app here --></span>
+
+---
+
+<span class="md-h2">✨ Features</span>
+- <span class="md-green">✅</span> [Feature 1 — e.g. Multi-tenant authentication with NextAuth.js]
+- <span class="md-green">✅</span> [Feature 2 — e.g. Stripe subscription billing with webhook handling]
+- <span class="md-green">✅</span> [Feature 3 — e.g. Real-time dashboard with auto-refresh via React Query]
+- <span class="md-green">✅</span> [Feature 4 — e.g. Role-based access control (Admin / User / Viewer)]
+- <span class="md-green">✅</span> [Feature 5 — e.g. Deployed to Vercel + Railway with CI/CD via GitHub Actions]
+
+---
+
+<span class="md-h2">🛠 Tech Stack</span>
+
+| Category | Technology |
+|----------|------------|
+| **Frontend** | Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS |
+| **Backend** | Node.js, Express.js, REST API |
+| **Database** | MongoDB Atlas, Mongoose, Redis (caching) |
+| **Auth** | NextAuth.js / Clerk + JWT |
+| **Payments** | Stripe API + Webhooks |
+| **Deployment** | Vercel (frontend) + Railway (backend) |
+| **CI/CD** | GitHub Actions |
+| **Testing** | Jest, React Testing Library |
+
+---
+
+<span class="md-h2">🚀 Getting Started</span>
+
+<span class="md-h3">Prerequisites</span>
+- Node.js 18+
+- MongoDB Atlas account
+- Stripe account (for billing features)
+
+<span class="md-h3">Installation</span>
+<span class="md-comment"># Clone the repository</span>
+git clone https://github.com/[yourusername]/[project-name]
+cd [project-name]
+
+<span class="md-comment"># Install dependencies</span>
+npm install
+
+<span class="md-comment"># Set up environment variables</span>
+cp .env.example .env.local
+<span class="md-comment"># Fill in your keys (see Environment Variables section)</span>
+
+<span class="md-comment"># Run development server</span>
+npm run dev
+
+---
+
+<span class="md-h2">🔑 Environment Variables</span>
+
+<span class="md-code">MONGODB_URI</span>=your_mongodb_connection_string
+<span class="md-code">NEXTAUTH_SECRET</span>=your_secret_key
+<span class="md-code">STRIPE_SECRET_KEY</span>=sk_test_your_key
+<span class="md-code">NEXT_PUBLIC_APP_URL</span>=http://localhost:3000
+
+---
+
+<span class="md-h2">📂 Project Structure</span>
+src/
+├── app/           <span class="md-comment"># Next.js App Router pages</span>
+├── components/    <span class="md-comment"># Reusable React components</span>
+├── lib/           <span class="md-comment"># Database, auth, stripe helpers</span>
+├── models/        <span class="md-comment"># MongoDB Mongoose schemas</span>
+├── api/           <span class="md-comment"># API route handlers</span>
+└── types/         <span class="md-comment"># TypeScript type definitions</span>
+
+---
+
+<span class="md-h2">📄 License</span>
+MIT License — free to use for portfolio or learning purposes.
+
+---
+
+<span class="md-h2">👤 Author</span>
+**[Your Name]** · [yourportfolio.dev] · [LinkedIn] · [Email]
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     12–13 — SALARY TEMPLATES
+══════════════════════════════════ -->
+<div class="page" id="salary">
+  <div class="section-label">Templates 12–13</div>
+  <div class="section-title"><span class="num">12</span> Salary Negotiation Scripts</div>
+
+  <div class="template-grid">
+    <div class="tmpl-card">
+      <div class="tmpl-card-header"><h3>Script 1 — When asked your expectations (early in process)</h3><span class="tmpl-type">Negotiation · Early stage</span></div>
+      <div class="tmpl-body">Interviewer: "What are your salary expectations?"
+
+You: "Based on my research into market rates for senior MERN/Next.js developers in remote roles with [US / UK] companies, and given my experience with [TypeScript, real-time systems, SaaS architecture], I'm targeting <strong>$[X]–$[Y]K per year</strong>.
+
+That said, I'm genuinely more interested in the right role and team than hitting a specific number. I'm flexible depending on the full package — equity, learning opportunities, and growth path all matter to me.
+
+What's the budget range you're working with for this position?"
+
+<em>💡 Tip: Always ask what their range is. Never be the only one who shows their cards.</em></div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Give a range where your minimum is 10% above your actual minimum. Let them anchor high.</span><button class="copy-btn" onclick="copyText(this, 's1')">Copy ↗</button></div>
+    </div>
+
+    <div class="tmpl-card">
+      <div class="tmpl-card-header"><h3>Script 2 — Counter-offer (offer came in low)</h3><span class="tmpl-type">Negotiation · Counter-offer</span></div>
+      <div class="tmpl-body">Them: "We'd like to offer you $[X]K"
+
+You: "Thank you so much — I'm genuinely excited about this role and the team. I've really enjoyed the interview process and I'm very motivated to join.
+
+I did want to have an honest conversation about the compensation. Based on my research and what I bring specifically — particularly [TypeScript migration experience / real-time systems / SaaS architecture] — I was expecting something closer to <strong>$[X+15]K</strong>.
+
+Is there any flexibility on the base, or alternatively, could we add [equity / signing bonus / extra PTO / 3-month salary review] to bridge the gap?"
+
+<em>💡 Tip: Always counter at least once. 80% of employers expect it and have room to go higher.</em></div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Be warm but firm. Never accept the first offer on the call — say you need to review and respond in 24–48 hours.</span><button class="copy-btn" onclick="copyText(this, 's2')">Copy ↗</button></div>
+    </div>
+
+    <div class="tmpl-card">
+      <div class="tmpl-card-header"><h3>Script 3 — Using competing offer as leverage</h3><span class="tmpl-type">Negotiation · Competing offer</span></div>
+      <div class="tmpl-body">You: "I want to be fully transparent with you — I do have another offer on the table for $[Y]K from [Company type, e.g. 'a US SaaS startup'].
+
+I want to be honest because [Company] is genuinely my first choice — the product, team, and mission align much more closely with what I'm looking for.
+
+Is there any way you could match or come close to $[Y]K? That would make this an easy decision for me."
+
+<em>💡 Tip: Only use this if the competing offer is real. Don't bluff — it can backfire badly.</em></div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Apply to multiple companies simultaneously so you genuinely have competing offers to leverage.</span><button class="copy-btn" onclick="copyText(this, 's3')">Copy ↗</button></div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;" id="salary-table"></div>
+  <div class="section-label">Template 13</div>
+  <div class="section-title"><span class="num">13</span> Salary Reference Table 2026</div>
+
+  <table class="salary-table">
+    <thead>
+      <tr>
+        <th>Level</th>
+        <th>USA (Annual)</th>
+        <th>UK (Annual)</th>
+        <th>Canada (Annual)</th>
+        <th>Dubai (Monthly)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Junior (0–2 yrs)</td><td>$55K–$80K</td><td>£35K–£50K</td><td>CAD $55K–$75K</td><td>AED 10K–15K</td></tr>
+      <tr><td>Mid-level (2–5 yrs)</td><td class="high">$80K–$110K</td><td class="high">£55K–£75K</td><td class="high">CAD $80K–$105K</td><td class="high">AED 16K–24K</td></tr>
+      <tr><td>Senior (5+ yrs)</td><td class="high">$110K–$160K</td><td class="high">£75K–£110K</td><td class="high">CAD $105K–$145K</td><td class="high">AED 24K–40K</td></tr>
+      <tr><td>Lead / Staff</td><td class="high">$150K–$200K+</td><td class="high">£100K–£150K</td><td class="high">CAD $130K–$175K</td><td class="high">AED 35K–55K</td></tr>
+      <tr><td>Contract / Freelance</td><td>$60–$120/hr</td><td>£45–£85/hr</td><td>CAD $55–$100/hr</td><td>AED 150–400/hr</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:var(--muted);">* Figures are approximate market rates for remote MERN/Next.js developers as of 2026. Actual offers vary by company size, funding stage, and your specific experience.</p>
+</div>
+
+
+<!-- ══════════════════════════════════
+     14–16 — FINAL TEMPLATES
+══════════════════════════════════ -->
+<div class="page" id="loom">
+  <div class="section-label">Templates 14–16</div>
+  <div class="section-title"><span class="num">14</span> Loom Video Introduction Script</div>
+
+  <div class="tips-box">
+    <strong>How to use a Loom intro</strong>
+    <ul>
+      <li>Record a 90-second screen + face video showing your best project</li>
+      <li>Send the Loom link instead of just a portfolio URL in cold outreach</li>
+      <li>Videos get 3–5x more response rates than text-only messages</li>
+    </ul>
+  </div>
+
+  <div class="tmpl-card">
+    <div class="tmpl-card-header"><h3>90-Second Loom Video Script</h3><span class="tmpl-type">Loom · Introduction</span></div>
+    <div class="tmpl-body"><em>[0:00–0:10] HOOK</em>
+"Hi [Name], I'm [Your Name] — a full-stack MERN developer. I recorded this 90-second video specifically for [Company Name] because I think there's a genuinely strong fit here."
+
+<em>[0:10–0:30] YOUR VALUE</em>
+"I've been building production web apps for [X] years — my core stack is Next.js, TypeScript, Node.js, and MongoDB. I specialize in [SaaS platforms / real-time apps / API design]."
+
+<em>[0:30–1:00] DEMO YOUR BEST PROJECT</em>
+[Share screen — demo your best project live]
+"Let me quickly show you [Project Name] — I built this to [solve problem]. It has [key features]. The backend handles [X] requests, and it's fully deployed on [Vercel/Railway]."
+[Show the GitHub repo briefly — a clean README signals professionalism]
+
+<em>[1:00–1:20] SPECIFIC FIT</em>
+"I looked at [Company]'s product specifically — I noticed you [use Next.js / are building X / recently launched Y]. That's exactly what I've been working on for the past [X] years."
+
+<em>[1:20–1:30] SOFT CTA</em>
+"I'd love a 15-minute conversation if this looks interesting. No pressure at all — my portfolio is at [URL] and I'll drop my resume in the message below. Thanks, [Name]!"</div>
+    <div class="tmpl-footer"><span class="tmpl-tip">Record at Loom.com — free plan works. Good lighting, clean desk background, speak clearly and at medium pace.</span><button class="copy-btn" onclick="copyText(this, 'loom1')">Copy ↗</button></div>
+  </div>
+
+  <div style="margin-top:40px;" id="referral"></div>
+  <div class="section-label">Template 15</div>
+  <div class="section-title"><span class="num">15</span> Referral Request Messages</div>
+
+  <div class="template-grid">
+    <div class="tmpl-card">
+      <div class="tmpl-card-header"><h3>Asking a developer at target company for a referral</h3><span class="tmpl-type">LinkedIn DM · Referral</span></div>
+      <div class="tmpl-body">Hi [Name],
+
+I've been following your work at [Company] and I'm really interested in joining the engineering team. I saw there's a [role title] opening and I believe I'd be a strong fit.
+
+I'm a MERN/Next.js developer with [X] years of experience. I know internal referrals make a big difference — would you be open to referring me if my profile looks like a good match?
+
+I've attached my resume and here's my portfolio: [URL]. No pressure at all — I just thought it was worth asking!
+
+Thanks so much, [Your Name]</div>
+      <div class="tmpl-footer"><span class="tmpl-tip">Make it easy for them — include your resume and portfolio link directly. Many companies pay referral bonuses ($1K–$5K), so it benefits them too.</span><button class="copy-btn" onclick="copyText(this, 'ref1')">Copy ↗</button></div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;" id="thank-you"></div>
+  <div class="section-label">Template 16</div>
+  <div class="section-title"><span class="num">16</span> Post-Interview Thank You Email</div>
+
+  <div class="letter">
+    <div class="letter-meta">
+      <p><strong>Subject:</strong> Thank you — [Your Name] / [Role] Interview</p>
+      <p><strong>Send within:</strong> 2 hours after the interview</p>
+    </div>
+
+    <p>Hi [Name],</p>
+
+    <p>Thank you so much for taking the time to speak with me today about the [Role Title] position. I really enjoyed our conversation — especially the discussion around [specific topic you talked about, e.g. "how you're approaching the real-time notification system" or "your plans for the API redesign next quarter"].</p>
+
+    <p>The conversation reinforced how excited I am about this role. [Company]'s approach to [specific thing they do well] is exactly the kind of work I want to be doing, and I believe my experience with [relevant skill — e.g. "Next.js App Router and TypeScript migration"] would let me contribute quickly from day one.</p>
+
+    <p>I also wanted to follow up on [any question you didn't fully answer or wanted to expand on] — [brief answer or clarification].</p>
+
+    <p>Please don't hesitate to reach out if you need any additional information, code samples, or references. I look forward to the next steps.</p>
+
+    <div class="letter-sig">
+      <p>Best regards,</p>
+      <p class="sig-name">[Your Name]</p>
+      <p style="font-size:13px;color:var(--muted);">[yourportfolio.dev] · [LinkedIn] · [Phone]</p>
+    </div>
+  </div>
+
+  <div style="background:var(--accent);color:var(--white);padding:40px;text-align:center;margin-top:40px;">
+    <div style="font-family:'Syne',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent2);margin-bottom:12px;">You've got this</div>
+    <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:700;margin-bottom:12px;">Now go ship something great.</div>
+    <div style="font-size:14px;color:rgba(255,255,255,0.6);max-width:400px;margin:0 auto;">The best portfolio is the one with a live demo link. Close this doc and go build.</div>
+  </div>
+</div>
+
+<script>
+function copyText(btn, id) {
+  const card = btn.closest('.tmpl-card');
+  const body = card.querySelector('.tmpl-body');
+  const text = body.innerText || body.textContent;
+  navigator.clipboard.writeText(text.trim()).then(() => {
+    btn.textContent = 'Copied! ✓';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Copy ↗';
+      btn.classList.remove('copied');
+    }, 2000);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text.trim();
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent = 'Copied! ✓';
+    setTimeout(() => btn.textContent = 'Copy ↗', 2000);
+  });
+}
+</script>
+
+</body>
+</html>
